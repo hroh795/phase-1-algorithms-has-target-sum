@@ -1,17 +1,36 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+  for(let i=0; i<array.length; i++){
+    //console.log(`i:${i}`)
+    for(let j=i+1; j<array.length; j++ ){
+      //console.log(`j: ${j}`)
+      let sumArray =0;
+      sumArray = array[i]+array[j]
+      //console.log(`sum: ${sumArray}`)
+      if (sumArray === target){
+        return true
+      }
+    }
+  } return false;
+  }
+
 
 /* 
   Write the Big O time complexity of your function here
+  
 */
 
-/* 
-  Add your pseudocode here
+/* pseudocode
+
+pick the first element 
+add the first element to rest of the elements
+
+pick the second element
 */
 
 /*
   Add written explanation of your solution here
+is there two elements in the array that adds up to target?  
 */
 
 // You can run `node index.js` to view these console logs
